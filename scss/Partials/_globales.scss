@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: beige;
+
+    h1 {
+        display: block;
+        font-size: xx-large;
+        margin: 0;
+        padding: 0;
+        
+        a {
+            text-decoration: none;
+                color: rgb(231, 138, 231);
+                padding: 2%;
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            padding-left: 4%;
+
+            a {
+                text-decoration: none;
+                color: burlywood;
+            }
+        }
+    }
+}
