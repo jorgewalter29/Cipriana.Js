@@ -18,24 +18,7 @@ let especialFelizCumple = 560;
 
 let carrito = [];
 
-class Producto {
-    constructor(nombre, precio) {
-        this.nombre = obj.nombre.ToUpperCase();
-        this.cantidad = parseInt(obj.cantidad);
-        this.precio = Number(obj.precio);
-        this.vendido = false;
-    }
 
-    sumaIva = () => this.precio = this.ptrcio * 1.21
-
-
-    total = () => this.precio * this.cantidad
-
-    verProducto = () => {
-        return `Nombre: ${this.nombre} Cantidad: ${this.cantidad} Precio: ${this.precio}`
-    }
-
-}
 
 function carritoCompra() {
     let total = 0;
@@ -90,13 +73,14 @@ function comprarFinalizarProductos() {
         case 3:
             alert("Gracias por su compra. Vuelva pronto!");
             console.log("Gracias por su compra. Vuelva pronto!");
-            opcionMenu = 6;
+
             break;
 
         default:
             console.log("Ingrese una opción válida.");
             comprarFinalizarProductos();
             break;
+            opcionMenu = 0;
     }
 }
 
@@ -241,14 +225,28 @@ while (opcionMenu !== 5) {
 
 
         case 4:
-            let contacto = parseInt(prompt("1- dejanos tu mensaje \n 0- volver al menu"));
-            let nombre = prompt("ingresa tu nombre y apellido");
-            console.log("hola " + nombre + " ingresa tu correo");
-            let email = prompt("ingresa tu correo");
-            console.log(email + " por ultimo dejanos tu mensaje");
-            let mensaje = prompt("escribe aqui tu mensaje");
-            console.log("este es tu mensaje\n" + mensaje);
-            alert("muchas gracias " + nombre + " por tu mensaje");
-            console.log("muchas gracias " + nombre + " nos pondremos en contacto contigo ");
+            let contacto = parseInt(prompt("1- Dejanos tu mensaje \n0- Volver al menú"));
+
+            switch (contacto) {
+                case 1:
+                    let nombre = prompt("Ingresa tu nombre y apellido");
+                    console.log("Hola " + nombre + ", ingresa tu correo");
+                    let email = prompt("Ingresa tu correo");
+                    console.log(email + ", por último, déjanos tu mensaje");
+                    let mensaje = prompt("Escribe aquí tu mensaje");
+                    console.log("Este es tu mensaje:\n" + mensaje);
+                    alert("Muchas gracias, " + nombre + ", por tu mensaje");
+                    console.log("Muchas gracias, " + nombre + ". Nos pondremos en contacto contigo.");
+                    break;
+
+                case 0:
+                    break;
+
+                default:
+                    alert("Opción inválida. Por favor ingrese una opción válida.");
+                    break;
+                    opcionMenu
+            }
+            break;
     }
 }
