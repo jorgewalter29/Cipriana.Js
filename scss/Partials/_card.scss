@@ -1,0 +1,124 @@
+.card {
+    width: 100%;
+    /* ajusta el ancho según sea necesario */
+    height: 100%;
+    /* ajusta la altura según sea necesario */
+}
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-title,
+.card-text {
+    font-family: 'Gruppo', cursive;
+    font-size: 3rem;
+    /* ajusta el tamaño del texto según sea necesario */
+}
+
+
+.card-img-overlay {
+    position: absolute;
+    top: 5rem;
+    right: 3rem;
+}
+
+.card-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+.mi-card {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+.card {
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.card__link {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+}
+
+.card__link:hover::after {
+    width: 100%;
+}
+
+.text {
+    color: white;
+}
+
+
+.card__title {
+    grid-row: 3/4;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.card__apply {
+    grid-row: 4/5;
+    align-self: center;
+}
+
+.card-5 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMBKU99xFOSss0wrEsAVd144uBRoH-fG0yiA&usqp=CAU');
+    background-size: cover;
+}
+
+.card-4 {
+    background-image: url('https://www.ar-hotels.com/uploads/06e20f2f-68cd-4c01-8d49-22a803de123b/cd88252a20f2d636f7350685bf960ac6/06e20f2f-68cd-4c01-8d49-22a803de123b.png');
+    background-size: cover;
+}
+
+.card-3 {
+    background-image: url('https://termasvillaelisa.com/wp-content/uploads/2022/05/Sala-de-relax.jpg');
+    background-size: cover;
+}
+
+.card-2 {
+    background-image: url('https://cdn.aarp.net/content/dam/aarp/entertainment/beauty-and-style/2018/08/1140-candlelight-esp.jpg');
+    background-size: cover;
+}
+
+
+
+@media (max-width: 1600px) {
+    .cards {
+        justify-content: center;
+    }
+}

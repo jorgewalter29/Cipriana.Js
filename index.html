@@ -7,15 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CIPRIANA</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="./css/Style.css">
 </head>
 
 <body>
-    <div>
+    <div class="body_container">
         <header class="header_container">
             <nav>
-                <h1><a href="./index.html">CIPRIANA</a></h1>
+                <span><a href="./index.html">CIPRIANA</a></span>
 
                 <ul class="menu">
                     <li><a href="index.html">Inicio</a></li>
@@ -24,19 +31,51 @@
 
                     <li><a href="./pages/Categorias.html">Categorias</a></li>
 
-                    <li><a href="./pages/Contacto.html">Contacto</a></li>
-
                     <li><a href="./pages/Reservas.html">Reservas</a></li>
+
+                    <li><a href="./pages/Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <section>
 
+                <div class="cards bg-dark text-white">
+                    <img class="card-img" src="/img/spa.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"> SPA CIPRIANA </h5>
+                        <p class="card-text">Viví Tu Descanso</p>
+                        <p class="card-text"> Nos Ocupamos De Tu Bienestar </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="mi-card">
+                    <div class="card card-5">
+                        <p class="card__apply">
+                            <a class="card__link" href="#">TRATAMIENTO <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div class="card card-4">
+                        <p class="card__apply">
+                            <a class="card__link" href="#">JACUSSI <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div class="card card-3">
+                        <p class="card__apply">
+                            <a class="card__link" href="#">RELAX <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div class="card card-2">
+                        <p class="card__apply">
+                            <a class="card__link" href="#">PRODUCTOS <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
-    <script src="./Scrip.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
