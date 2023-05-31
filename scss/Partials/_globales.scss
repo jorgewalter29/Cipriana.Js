@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(233, 239, 165);
+}
+
 .body_container {
     font-family: 'Gruppo', cursive;
 }
@@ -16,13 +20,14 @@ nav {
         font-size: xx-large;
         margin: 0;
         padding: 0;
-        
+
         a {
             text-decoration: none;
-                color: rgb(231, 138, 231);
-                padding-left: .5rem;
+            color: rgb(231, 138, 231);
+            padding-left: .5rem;
         }
     }
+
     ul {
         display: flex;
         justify-content: center;
@@ -39,4 +44,36 @@ nav {
             }
         }
     }
+}
+
+/* MENU DESPLEGABLE */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: beige;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+            color: burlywood;
+        }
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.carrito-page {
+    display: none;
 }

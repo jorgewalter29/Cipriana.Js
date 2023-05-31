@@ -95,13 +95,9 @@
     align-self: center;
 }
 
-.card-5 {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMBKU99xFOSss0wrEsAVd144uBRoH-fG0yiA&usqp=CAU');
-    background-size: cover;
-}
 
-.card-4 {
-    background-image: url('https://www.ar-hotels.com/uploads/06e20f2f-68cd-4c01-8d49-22a803de123b/cd88252a20f2d636f7350685bf960ac6/06e20f2f-68cd-4c01-8d49-22a803de123b.png');
+.card-2 {
+    background-image: url('https://cdn.aarp.net/content/dam/aarp/entertainment/beauty-and-style/2018/08/1140-candlelight-esp.jpg');
     background-size: cover;
 }
 
@@ -110,10 +106,76 @@
     background-size: cover;
 }
 
-.card-2 {
+.card-4 {
+    background-image: url('https://www.ar-hotels.com/uploads/06e20f2f-68cd-4c01-8d49-22a803de123b/cd88252a20f2d636f7350685bf960ac6/06e20f2f-68cd-4c01-8d49-22a803de123b.png');
+    background-size: cover;
+}
+
+.card-5 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMBKU99xFOSss0wrEsAVd144uBRoH-fG0yiA&usqp=CAU');
+    background-size: cover;
+}
+
+.card-6 {
+    background-image: url('https://payload.cargocollective.com/1/9/314912/4595039/beauty01-b_o.jpg');
+    background-size: cover;
+}
+
+.card-7 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPIaxcZkCCkMik2HpfPh_Odf06RcbljT4sTw&usqp=CAU');
+    background-size: cover;
+}
+
+.card-8 {
+    background-image: url('https://ustraveler.com.mx/wp-content/uploads/2016/05/us-traveler-spa-para-concentir-a-mama.jpg');
+    background-size: cover;
+}
+
+.card-9 {
+    background-image: url('https://img.freepik.com/fotos-premium/productos-spa-aromaterapia-sobre-fondo-madera_63726-1395.jpg');
+    background-size: cover;
+}
+
+.card-10 {
     background-image: url('https://cdn.aarp.net/content/dam/aarp/entertainment/beauty-and-style/2018/08/1140-candlelight-esp.jpg');
     background-size: cover;
 }
+
+.card-11 {
+    background-image: url('https://us.123rf.com/450wm/marilyna/marilyna1706/marilyna170600044/80039273-productos-naturales-para-la-limpieza-de-belleza-con-spa-y-cuidado-de-la-piel-con-accesorios-para-el.jpg?ver=6');
+    background-size: cover;
+}
+
+.card-12 {
+    background-image: url('https://img.freepik.com/fotos-premium/productos-spa-cuidado-facial-corporal-sal-marina-natural-jabon-casero-aceite-masaje-toallas-colores-concepto-spa-cuidado-corporal_111869-4173.jpg');
+    background-size: cover;
+}
+
+.card-13 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_67GX9EDgVOuq6QXJYktSvjSxCAnFIpnSwg&usqp=CAU');
+    background-size: cover;
+}
+
+.card-14 {
+    background-image: url('https://na.shopmo.com/images/products/xlrg/shopmo-spa-shampoo-man-303-shampoo-quint-10_xlrg.jpg');
+    background-size: cover;
+}
+
+.card-15 {
+    background-image: url('https://img.freepik.com/foto-gratis/composicion-spa-productos-cuidado-corporal-sobre-fondo-madera_169016-17127.jpg');
+    background-size: cover;
+}
+
+.card-16 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwdah83LUhUzq7prlEN2X2Pm1hoYwzsVuPBb0fSnBdeV-_idQ1Jv0G5cx2fnzZtBdYQ58&usqp=CAU');
+    background-size: cover;
+}
+
+.card-17 {
+    background-image: url('https://magazine.velasresorts.com.mx/wp-content/uploads/2020/11/Sahumerio-SE-Spa-Grand-Velas-Riviera-Maya-scaled.jpg');
+    background-size: cover;
+}
+
 
 
 
@@ -121,4 +183,68 @@
     .cards {
         justify-content: center;
     }
+}
+
+
+
+
+.product-page {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        color: antiquewhite;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.5em;
+        color: antiquewhite;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 2em;
+        color: antiquewhite;
+    }
+}
+
+.product-page .imgProducto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.product-page .imgProducto img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-page .product-content {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.product-page button {
+    margin-top: 10px;
+    position: relative;
+    left: 20rem;
+    font-size: larger;
+    background-color: transparent;
+    color: antiquewhite;
+    text-decoration: none;
+    
+
 }

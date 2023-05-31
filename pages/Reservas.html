@@ -6,27 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
 
+
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+
+
+    <!-- Main Css -->
     <link rel="stylesheet" href="../css/Style.css">
+
 </head>
 <body>
-    <div>
+    <div class="body_container">
         <header class="header_container">
             <nav>
-                <h1><a href="../index.html">CIPRIANA</a></h1>
+                <span><a href="../index.html">CIPRIANA</a></span>
 
-                <input class="checkbox" type="checkbox" name=" hamburguesa" id="hamburguesa">
-                <i class="icon fi fi-rr-menu-burger"></i>
-                <i class="icon fi fi-rr-cross"></i>
+                
                 <ul class="menu">
                     <li><a href="../index.html">Inicio</a></li>
 
-                    <li><a href="./Nosotros.html">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="Categorias.html" class="dropbtn">Categorias</a>
+                        <div class="dropdown-content">
+                            <a href="Productos.html">Productos</a>
+                            <a href="Pomociones.html">Prompociones</a>
+                            <a href="Vauchers.html">vauchers</a>
+                        </div>
+                    </li>
 
-                    <li><a href="./Categorias.html">Categorias</a></li>
+                    <li class="dropdown">
+                        <a href="Reservas.html" class="dropbtn">Reservas</a>
+                        <div class="dropdown-content">
+                            <a href="Tratamiento.html">Tratamiento</a>
+                            <a href="Jacuzzi.html">Jacuzzi</a>
+                            <a href="Relax.html">Relax</a>
+                        </div>
+                    </li>
 
-                    <li><a href="./Contacto.html">Contacto</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
 
-                    <li><a href="./Reservas.html">Reservas</a></li>
+                    <li><a href="MiCarrito.html">Mi carrito</a></li>
+
                 </ul>
             </nav>
         </header>

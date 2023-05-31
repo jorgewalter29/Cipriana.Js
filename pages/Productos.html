@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTOS</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+
+
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../css/Style.css">
+
+
+</head>
+
+<body>
+    <div class="body_container">
+        <header class="header_container">
+            <nav>
+                <span><a href="../index.html">CIPRIANA</a></span>
+
+                <ul class="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+
+                    <li class="dropdown">
+                        <a href="Categorias.html" class="dropbtn">Categorias</a>
+                        <div class="dropdown-content">
+                            <a href="Productos.html">Productos</a>
+                            <a href="Pomociones.html">Prompociones</a>
+                            <a href="Vauchers.html">vauchers</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="Reservas.html" class="dropbtn">Reservas</a>
+                        <div class="dropdown-content">
+                            <a href="Tratamiento.html">Tratamiento</a>
+                            <a href="Jacuzzi.html">Jacuzzi</a>
+                            <a href="Relax.html">Relax</a>
+                        </div>
+                    </li>
+
+                    <li><a href="Contacto.html">Contacto</a></li>
+
+                    <li><a href="MiCarrito.html">Mi carrito</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <div class="mi-card">
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer" />
+                    <div class="card card-6">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">ACEITE CORPORAL <iclass="fas
+                                    fa-arrow-right">
+                                    </iclass=></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">ACEITE CORPORAL</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://payload.cargocollective.com/1/9/314912/4595039/beauty01-b_o.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+
+                    <div class="card card-7">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">CREMA CORPORAL <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">CREMA CORPORAL</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPIaxcZkCCkMik2HpfPh_Odf06RcbljT4sTw&usqp=CAU"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-8">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">PIEDRAS <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">PIEDRAS AL VAPOR</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://ustraveler.com.mx/wp-content/uploads/2016/05/us-traveler-spa-para-concentir-a-mama.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-9">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">AROMATIZANTES <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">AROMATIZANTES</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://img.freepik.com/fotos-premium/productos-spa-aromaterapia-sobre-fondo-madera_63726-1395.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+                </div>
+                <div class="mi-card">
+                    <div class="card card-10">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">ESENCIAS NATURALES <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">ESENCIAS NATURALES</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://cdn.aarp.net/content/dam/aarp/entertainment/beauty-and-style/2018/08/1140-candlelight-esp.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-11">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">MASAJEADOR <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">MASAJEADOR</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://us.123rf.com/450wm/marilyna/marilyna1706/marilyna170600044/80039273-productos-naturales-para-la-limpieza-de-belleza-con-spa-y-cuidado-de-la-piel-con-accesorios-para-el.jpg?ver=6"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-12">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">JABONES <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">JABONES</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://img.freepik.com/fotos-premium/productos-spa-cuidado-facial-corporal-sal-marina-natural-jabon-casero-aceite-masaje-toallas-colores-concepto-spa-cuidado-corporal_111869-4173.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-13">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">CERA DEPILATORIA <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">CERA DEPILATORIA</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_67GX9EDgVOuq6QXJYktSvjSxCAnFIpnSwg&usqp=CAU"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+                </div>
+                <div class="mi-card">
+                    <div class="card card-14">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">SHAMPOO <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">SHAMPOO</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://na.shopmo.com/images/products/xlrg/shopmo-spa-shampoo-man-303-shampoo-quint-10_xlrg.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-15">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">MINERALES <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">MINERALES</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://img.freepik.com/foto-gratis/composicion-spa-productos-cuidado-corporal-sobre-fondo-madera_169016-17127.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-16">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">SALES AROMATICAS<i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">SALES AROMATICAS</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwdah83LUhUzq7prlEN2X2Pm1hoYwzsVuPBb0fSnBdeV-_idQ1Jv0G5cx2fnzZtBdYQ58&usqp=CAU"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+
+                    <div class="card card-17">
+                        <p class="card__apply">
+                            <a class="card__link" href="#" onclick="verProducto();">SAUMERIOS <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div id="product-page" class="product-page">
+                        <!-- Contenido de la vista del producto -->
+                        <h2 id="product-name">SAUMERIOS</h2>
+                        <p>Aceite a base de Oleo y Hierbas Naturales con esencias aromáticas</p>
+                        <h3 id="product-price">$500</h3>
+                        <div class="imgProducto">
+                            <img id="product-image"
+                                src="https://magazine.velasresorts.com.mx/wp-content/uploads/2020/11/Sahumerio-SE-Spa-Grand-Velas-Riviera-Maya-scaled.jpg"
+                                alt="Imagen del producto">
+                        </div>
+                        <button id="buy-btn" class="boton-item">Comprar</button>
+                        <button onclick="cerrarProducto();">Cerrar</button>
+                    </div>
+                </div>
+                </section>
+                <section class="contenedor">
+                    <div class="carrito">
+                        <div class="header-carrito">
+                            <h2>Tu Carrito</h2>
+                        </div>
+    
+                        <div class="carrito-items"></div>
+    
+                        <div class="carrito-total">
+                            <div class="fila">
+                                <strong>Tu Total</strong>
+                                <span class="carrito-precio-total">$0,00</span>
+                            </div>
+                            <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+                        </div>
+                    </div>
+                </section>
+        </main>
+    </div>
+
+    
+    
+    <script src="../productos.js"></script>
+    <script src="../fuctions.js"></script>
+    <script src="../js.js"></script>
+</body>
+
+</html>
