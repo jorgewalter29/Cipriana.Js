@@ -1,4 +1,10 @@
 
+
+// Variable global para almacenar los productos agregados al carrito
+let carrito = [];
+
+
+
 let carritoVisible = false;
 
 
@@ -11,30 +17,30 @@ if (document.readyState == 'loading') {
 function ready() {
 
     //Agregremos funcionalidad a los botones eliminar del carrito
-    let botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
-    for (let i = 0; i < botonesEliminarItem.length; i++) {
-        let button = botonesEliminarItem[i];
+    var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
+    for (var i = 0; i < botonesEliminarItem.length; i++) {
+        var button = botonesEliminarItem[i];
         button.addEventListener('click', eliminarItemCarrito);
     }
 
     //Agrego funcionalidad al boton sumar cantidad
-    let botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
-    for (let i = 0; i < botonesSumarCantidad.length; i++) {
-        let button = botonesSumarCantidad[i];
+    var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
+    for (var i = 0; i < botonesSumarCantidad.length; i++) {
+        var button = botonesSumarCantidad[i];
         button.addEventListener('click', sumarCantidad);
     }
 
     //Agrego funcionalidad al buton restar cantidad
-    let botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
-    for (let i = 0; i < botonesRestarCantidad.length; i++) {
-        let button = botonesRestarCantidad[i];
+    var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
+    for (var i = 0; i < botonesRestarCantidad.length; i++) {
+        var button = botonesRestarCantidad[i];
         button.addEventListener('click', restarCantidad);
     }
 
     //Agregamos funcionalidad al boton Agregar al carrito
-    let botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
-    for (let i = 0; i < botonesAgregarAlCarrito.length; i++) {
-        let button = botonesAgregarAlCarrito[i];
+    var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
+    for (var i = 0; i < botonesAgregarAlCarrito.length; i++) {
+        var button = botonesAgregarAlCarrito[i];
         button.addEventListener('click', agregarAlCarritoClicked);
     }
 
@@ -43,24 +49,14 @@ function ready() {
 }
 
 
-function pagarClicked() {
-    alert("Gracias por la compra");
-    //Elimino todos los elmentos del carrito
-    let carritoItems = document.getElementsByClassName('carrito-items')[0];
-    while (carritoItems.hasChildNodes()) {
-        carritoItems.removeChild(carritoItems.firstChild)
-    }
-    actualizarTotalCarrito();
-    ocultarCarrito();
-}
 
 function agregarAlCarritoClicked(event) {
-    let button = event.target;
-    let item = button.parentElement;
-    let titulo = item.getElementsByClassName('titulo-item')[0].innerText;
-    let precio = item.getElementsByClassName('precio-item')[0].innerText;
-    let imagenSrc = item.getElementsByClassName('img-item')[0].src;
-    console.log(imagenSrc);
+    var button = event.target;
+    var item = button.parentElement;
+    var titulo = item.getElementsByClassName('titulo-item')[0].innerText;
+    var precio = item.getElementsByClassName('precio-item')[0].innerText;
+    var imagenSrc = item.getElementsByClassName('img-item')[0].src;
+    console.log(titulo, precio);
 
     agregarItemAlCarrito(titulo, precio, imagenSrc);
 
@@ -79,21 +75,22 @@ function hacerVisibleCarrito() {
 }
 
 
+
 function agregarItemAlCarrito(titulo, precio, imagenSrc) {
-    let item = document.createElement('div');
+    var item = document.createElement('div');
     item.classList.add = ('item');
     var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
 
     //controlamos que el item que intenta ingresar no se encuentre en el carrito
-    let nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
-    for (let i = 0; i < nombresItemsCarrito.length; i++) {
+    var nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
+    for (var i = 0; i < nombresItemsCarrito.length; i++) {
         if (nombresItemsCarrito[i].innerText == titulo) {
             alert("El item ya se encuentra en el carrito");
             return;
         }
     }
 
-    let itemCarritoContenido = `
+    var itemCarritoContenido = `
         <div class="carrito-item">
             <img src="${imagenSrc}" width="80px" alt="">
             <div class="carrito-item-detalles">
@@ -117,23 +114,89 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
     item.getElementsByClassName('btn-eliminar')[0].addEventListener('click', eliminarItemCarrito);
 
     //Agregmos al funcionalidad restar cantidad del nuevo item
-    let botonRestarCantidad = item.getElementsByClassName('restar-cantidad')[0];
+    var botonRestarCantidad = item.getElementsByClassName('restar-cantidad')[0];
     botonRestarCantidad.addEventListener('click', restarCantidad);
 
     //Agregamos la funcionalidad sumar cantidad del nuevo item
-    let botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
+    var botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
     botonSumarCantidad.addEventListener('click', sumarCantidad);
-
-    let producto = {
-        titulo: titulo,
-        precio: precio,
-        imagenSrc: imagenSrc
-    };
-    localStorage.setItem('producto_' + titulo, JSON.stringify(producto));
 
     //Actualizamos total
     actualizarTotalCarrito();
 }
+
+
+function comprarClicked(event) {
+    let carritoItems = document.getElementsByClassName('carrito-item');
+    let productosAComprar = [];
+
+    for (let i = 0; i < carritoItems.length; i++) {
+        let item = carritoItems[i];
+        let titulo = item.getElementsByClassName('carrito-item-titulo')[0].innerText;
+        let precio = item.getElementsByClassName('carrito-item-precio')[0].innerText;
+        let imagenSrc = item.getElementsByTagName('img')[0].src;
+
+        let producto = {
+            nombre: titulo,
+            precio: precio,
+            descripcion: descripcion
+        };
+    }
+}
+
+// Función comprarClicked para vaciar el carrito
+function comprarClicked() {
+    mostrarCompraExitosa();
+    vaciarCarrito();
+    ocultarCarrito();
+}
+
+
+
+// Agregamos funcionalidad al botón comprar
+document.getElementsByClassName('btn-pagar')[0].addEventListener('click', comprarClicked);
+
+function pagarClicked() {
+    // Mostrar SweetAlert de compra exitosa
+    Swal.fire("Compra exitosa", "Gracias por tu compra", "success");
+
+    // Vaciar el carrito
+    carrito = [];
+    actualizarTotalCarrito();
+    ocultarCarrito();
+}
+
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+    let carritoItems = document.getElementsByClassName('carrito-items')[0];
+    carritoItems.innerHTML = "";
+    actualizarTotalCarrito();
+}
+
+function mostrarCompraExitosa() {
+    Swal.fire({
+        title: 'Compra Exitosa',
+        text: 'Gracias por tu compra. ¡Disfruta de tus productos!',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
+}
+
+function ocultarCarrito() {
+    let carritoItems = document.getElementsByClassName('carrito-items')[0];
+    if (carritoItems.childElementCount == 0) {
+        let carrito = document.getElementsByClassName('carrito')[0];
+        carrito.style.marginRight = '-100%';
+        carrito.style.opacity = '0';
+        carritoVisible = false;
+
+        let items = document.getElementsByClassName('contenedor-items')[0];
+        items.style.width = '100%';
+    }
+}
+
+
 
 function sumarCantidad(event) {
     let buttonClicked = event.target;
@@ -157,35 +220,14 @@ function restarCantidad(event) {
     }
 }
 
-
 function eliminarItemCarrito(event) {
     let buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
     //Actualizamos el total del carrito
     actualizarTotalCarrito();
-
-    let titulo = event.target.parentElement.getElementsByClassName('carrito-item-titulo')[0].innerText;
-    localStorage.removeItem('producto_' + titulo);
-
-    //la siguiente funciòn controla si hay elementos en el carrito
     //Si no hay elimino el carrito
     ocultarCarrito();
 }
-
-function ocultarCarrito() {
-    let carritoItems = document.getElementsByClassName('carrito-items')[0];
-    if (carritoItems.childElementCount == 0) {
-        let carrito = document.getElementsByClassName('carrito')[0];
-        carrito.style.marginRight = '-100%';
-        carrito.style.opacity = '0';
-        carritoVisible = false;
-
-        let items = document.getElementsByClassName('contenedor-items')[0];
-        items.style.width = '100%';
-    }
-}
-
-
 
 function actualizarTotalCarrito() {
     //seleccionamos el contenedor carrito
@@ -209,3 +251,35 @@ function actualizarTotalCarrito() {
 
 }
 
+
+
+
+
+const urlProducts = "https://6491fe3f2f2c7ee6c2c94480.mockapi.io/products";
+const productos = [];
+
+function traerProductos(productos) {
+    fetch(urlProducts)
+        .then((res) => res.json())
+        .then((data) => {
+            data.forEach((producto) => {
+                productos.push(producto);
+            });
+            console.log(data);
+        });
+}
+
+traerProductos(productos);
+
+async function comprarProductoAsync(producto) {
+    const resp = await fetch(urlProducts, {
+        method: "POST",
+        body: JSON.stringify(producto),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+    const data = await resp.json();
+    traerProductos(productos); // Pasar la lista de productos actualizada
+    console.log(data);
+}

@@ -52,3 +52,57 @@ formularioNewsletter.addEventListener('submit', function (event) {
 
     alert('Formulario de Newsletter enviado con éxito');
 });
+
+
+
+
+
+function procesarCompra() {
+    let carritoItems = document.getElementsByClassName('carrito-item');
+
+    // Crear un array para almacenar los detalles de cada item en el carrito
+    let itemsCompra = [];
+
+    for (let i = 0; i < carritoItems.length; i++) {
+        let item = carritoItems[i];
+        let titulo = item.getElementsByClassName('carrito-item-titulo')[0].innerText;
+        let precio = item.getElementsByClassName('carrito-item-precio')[0].innerText;
+        let cantidad = item.getElementsByClassName('carrito-item-cantidad')[0].value;
+
+        // Agregar los detalles del item al array de itemsCompra
+        itemsCompra.push({
+            titulo: titulo,
+            precio: precio,
+            cantidad: cantidad
+        });
+    }
+
+    // Crear el objeto con los detalles de la compra
+    let compra = {
+        items: itemsCompra
+    };
+
+    // Realizar la solicitud POST a la API de Mercado Pago
+    fetch('https://api.mercadopago.com/v1/compras', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer tu_token_de_acceso'
+        },
+        body: JSON.stringify(compra)
+    })
+        .then(response => {
+            if (response.ok) {
+                // La compra se procesó correctamente
+                Swal.fire('¡Compra realizada con éxito!');
+                // Aquí puedes realizar acciones adicionales, como vaciar el carrito
+            } else {
+                // Hubo un error al procesar la compra
+                Swal.fire('Error al procesar la compra');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            Swal.fire('Error al procesar la compra');
+        });
+}

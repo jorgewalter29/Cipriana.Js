@@ -1,0 +1,26 @@
+.form_pagos {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+
+    form {
+        max-width: 100%;
+        margin: auto;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px 20px;
+        box-sizing: border-box;
+        margin-top: 3em;
+        border-radius: 7px;
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+}

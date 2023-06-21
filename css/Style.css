@@ -249,6 +249,55 @@ nav {
   color: antiquewhite;
   text-decoration: none; }
 
+.tratamiento {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem; }
+  .tratamiento .container {
+    position: relative;
+    padding: 1.5rem; }
+    .tratamiento .container .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 14em;
+      height: 20em;
+      padding: 1rem;
+      background-color: beige;
+      border: 1px solid rgba(255, 255, 255, 0.222);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border-radius: .7rem;
+      transition: all ease .3s; }
+      .tratamiento .container .box:hover {
+        box-shadow: 0px 0px 20px 1px #ffbb763f;
+        border: 1px solid rgba(127, 189, 239, 0.454); }
+      .tratamiento .container .box div strong {
+        display: block;
+        margin-bottom: .3rem;
+        padding-top: .3rem; }
+      .tratamiento .container .box div p {
+        margin: 0;
+        font-size: .9em;
+        font-weight: 300;
+        letter-spacing: .1em; }
+      .tratamiento .container .box .btn-comprar {
+        background-color: transparent;
+        border: none;
+        padding-top: .3rem;
+        cursor: pointer; }
+        .tratamiento .container .box .btn-comprar:hover {
+          color: darkorange; }
+
+.container::before,
+.container::after {
+  content: "";
+  background-color: #fab5704c;
+  position: absolute; }
+
 .parrafo {
   display: flex;
   flex-direction: column; }
@@ -501,5 +550,26 @@ nav {
 
   .carrito {
     width: 100%; } }
+.form_pagos {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100vh; }
+  .form_pagos form {
+    max-width: 100%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 3em;
+    border-radius: 7px; }
+    .form_pagos form h1 {
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      font-size: 30px;
+      margin-bottom: 20px; }
 
 /*# sourceMappingURL=Style.css.map */
