@@ -71,8 +71,8 @@ const productos = [
 // Iterar sobre el array de productos
 productos.forEach(function (producto) {
     // Obtener el botón de reserva y la lista de turnos del producto actual
-    var reservaBtn = document.getElementById(producto.reservaBtnId);
-    var turnosList = document.getElementById(producto.turnosListId);
+    let reservaBtn = document.getElementById(producto.reservaBtnId);
+    let turnosList = document.getElementById(producto.turnosListId);
 
     // Agregar el evento de clic al botón de reserva
     reservaBtn.addEventListener("click", function () {
@@ -82,7 +82,7 @@ productos.forEach(function (producto) {
 
 
 // Obtener la referencia al botón de reservar turno
-var reservaBtn = document.getElementById("reservaBtn");
+let reservaBtn = document.getElementById("reservaBtn");
 
 // Agregar un controlador de eventos al botón
 reservaBtn.addEventListener("click", mostrarFormularioReserva);
@@ -107,13 +107,13 @@ function mostrarFormularioReserva(producto, turnosList) {
         allowOutsideClick: false
     }).then(function (result) {
         if (result.isConfirmed) {
-            var fechaInput = result.value[0];
-            var horaInput = result.value[1];
+            let fechaInput = result.value[0];
+            let horaInput = result.value[1];
 
             // Validar que se hayan ingresado valores de fecha y hora
             if (fechaInput && horaInput) {
                 // Crear un nuevo elemento de lista
-                var nuevoTurno = document.createElement("li");
+                let nuevoTurno = document.createElement("li");
 
                 // Establecer el texto del nuevo turno con la fecha y la hora seleccionadas
                 nuevoTurno.textContent = "Turno reservado para el " + fechaInput + " a las " + horaInput;
